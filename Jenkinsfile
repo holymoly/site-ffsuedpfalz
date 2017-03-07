@@ -7,7 +7,7 @@ node {
             echo "Branch: ${env.BRANCH_NAME}"
             echo "Workspace: ${WORKSPACE}"
             checkout scm
-            sh "sh -x ${WORKSPACE}/build-jenkins.sh"
+            sh "sh -x build-jenkins.sh"
         }
     }
 }
