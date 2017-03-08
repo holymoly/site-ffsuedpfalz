@@ -41,6 +41,10 @@ cp "${WORKSPACE}/site.conf" "/temp/$1/site/"
 
 # Gluon Pakete aktualisieren und Build ausfuhren
 cd "/temp/$1"
+
+#temporärer fix
+test -f "/temp/$1/openwrt/dl/linux-3.18.44.tar.xz" || wget https://www.kernel.org/pub/linux/kernel/v3.0/linux-3.18.44.tar.xz -O "/temp/$1/openwrt/dl/linux-3.18.44.tar.xz"
+
 make update "GLUON_RELEASE=$GLUON_RELEASE"
 make clean V=s GLUON_TARGET=ar71xx-generic
 make -j5 V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
