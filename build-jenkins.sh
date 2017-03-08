@@ -25,20 +25,20 @@ export GLUON_RELEASE=$GLUON_COMMIT-`date '+%Y%m%d'`
 echo "Building gluon $GLUON_COMMIT -> $GLUON_RELEASE"
 
 # Verzeichnis für Gluon-Repo erstellen und initialisieren
-test -d "/temp/${BRANCH}" || git clone "$GLUON_URL" "/temp/${BRANCH}"
-cd "/temp/${BRANCH}"
+test -d "/temp/${env.BRANCH_NAME}" || git clone "$GLUON_URL" "/temp/${env.BRANCH_NAME}"
+cd "/temp/${env.BRANCH_NAME}"
 git fetch
 git checkout -f $GLUON_COMMIT
 
 # Site config kopieren
-test -d "/temp/${BRANCH}/site" && rm -r "/temp/${BRANCH}/site"
-mkdir "/temp/${BRANCH}/site"
-cp "${WORKSPACE}/modules" "/temp/${BRANCH}/site/"
-cp "${WORKSPACE}/site.mk" "/temp/${BRANCH}/site/"
-cp "${WORKSPACE}/site.conf" "/temp/${BRANCH}/site/"
+test -d "/temp/${env.BRANCH_NAME}/site" && rm -r "/temp/${env.BRANCH_NAME}/site"
+mkdir "/temp/${env.BRANCH_NAME}/site"
+cp "${WORKSPACE}/modules" "/temp/${env.BRANCH_NAME}/site/"
+cp "${WORKSPACE}/site.mk" "/temp/${env.BRANCH_NAME}/site/"
+cp "${WORKSPACE}/site.conf" "/temp/${env.BRANCH_NAME}/site/"
 
 # Gluon Pakete aktualisieren und Build ausfuhren
-cd "/temp/${BRANCH}"
+cd "/temp/${env.BRANCH_NAME}"
 make update "GLUON_RELEASE=$GLUON_RELEASE"
 make clean V=s GLUON_TARGET=ar71xx-generic
 make -j5 V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
