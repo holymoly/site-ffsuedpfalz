@@ -25,9 +25,9 @@ export GLUON_RELEASE=$GLUON_COMMIT-`date '+%Y%m%d'`
 echo "Building gluon $GLUON_COMMIT -> $GLUON_RELEASE"
 
 # Verzeichnis für Gluon-Repo erstellen und initialisieren
-echo  "/temp/${env.BRANCH_NAME}"
+echo  /temp/{env.BRANCH_NAME}
 
-test -d "/temp/${env.BRANCH_NAME}" || git clone "$GLUON_URL" "/temp/${env.BRANCH_NAME}"
+test -d "/temp/{env.BRANCH_NAME}" || git clone "$GLUON_URL" "/temp/{env.BRANCH_NAME}"
 cd "/temp/${env.BRANCH_NAME}"
 git fetch
 git checkout -f $GLUON_COMMIT
