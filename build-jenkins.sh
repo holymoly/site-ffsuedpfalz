@@ -25,20 +25,20 @@ export GLUON_RELEASE=$GLUON_COMMIT-`date '+%Y%m%d'`
 echo "Building gluon $GLUON_COMMIT -> $GLUON_RELEASE"
 
 # Verzeichnis für Gluon-Repo erstellen und initialisieren
-test -d "/temp/gluon" || git clone "$GLUON_URL" "/temp/gluon"
-cd "/temp/gluon"
+test -d "/temp/${BRANCH}" || git clone "$GLUON_URL" "/temp/${BRANCH}"
+cd "/temp/${BRANCH}"
 git fetch
 git checkout -f $GLUON_COMMIT
 
 # Site config kopieren
-test -d "/temp/gluon/site" && rm -r "/temp/gluon/site"
-mkdir "/temp/gluon/site"
-cp "${WORKSPACE}/modules" "/temp/gluon/site/"
-cp "${WORKSPACE}/site.mk" "/temp/gluon/site/"
-cp "${WORKSPACE}/site.conf" "/temp/gluon/site/"
+test -d "/temp/${BRANCH}/site" && rm -r "/temp/${BRANCH}/site"
+mkdir "/temp/${BRANCH}/site"
+cp "${WORKSPACE}/modules" "/temp/${BRANCH}/site/"
+cp "${WORKSPACE}/site.mk" "/temp/${BRANCH}/site/"
+cp "${WORKSPACE}/site.conf" "/temp/${BRANCH}/site/"
 
 # Gluon Pakete aktualisieren und Build ausfuhren
-cd "/temp/gluon"
+cd "/temp/${BRANCH}"
 make update "GLUON_RELEASE=$GLUON_RELEASE"
 make clean V=s GLUON_TARGET=ar71xx-generic
 make -j5 V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
