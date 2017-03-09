@@ -43,6 +43,8 @@ cp "${WORKSPACE}/site.conf" "/temp/$1/site/"
 cd "/temp/$1"
 
 #temporärer fix
+mkdir /temp/$1/openwrt/
+mkdir /temp/$1/openwrt/dl/
 test -f "/temp/$1/openwrt/dl/linux-3.18.44.tar.xz" || wget https://www.kernel.org/pub/linux/kernel/v3.0/linux-3.18.44.tar.xz -O "/temp/$1/openwrt/dl/linux-3.18.44.tar.xz"
 
 make update "GLUON_RELEASE=$GLUON_RELEASE"
