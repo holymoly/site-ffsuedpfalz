@@ -1,33 +1,32 @@
 GLUON_SITE_PACKAGES := \
-  gluon-mesh-batman-adv-15 \
   gluon-alfred \
-  gluon-respondd \
-  gluon-autorestart \
-  gluon-autoupdater \
-  gluon-config-mode-autoupdater \
-  gluon-config-mode-contact-info \
-  gluon-config-mode-core \
-  gluon-config-mode-geo-location \
-  gluon-config-mode-hostname \
-  gluon-config-mode-tunneldigger \
-  gluon-ebtables-filter-multicast \
-  gluon-ebtables-filter-ra-dhcp \
-  gluon-ebtables-filter-roguenets \
-  gluon-luci-admin \
-  gluon-luci-autoupdater \
-  gluon-luci-portconfig \
-  gluon-luci-wifi-config \
-  gluon-luci-private-wifi \
-  gluon-next-node \
-  gluon-mesh-vpn-tunneldigger \
-  gluon-tunneldigger-watchdog \
-  gluon-radvd \
-  gluon-setup-mode \
-  gluon-status-page \
-  gluon-migrate-vpn \
-  iwinfo \
-  iptables \
-  haveged
+	gluon-respondd \
+	gluon-autoupdater \
+	gluon-config-mode-autoupdater \
+	gluon-config-mode-contact-info \
+	gluon-config-mode-core \
+	gluon-config-mode-geo-location \
+	gluon-config-mode-hostname \
+	gluon-config-mode-mesh-vpn \
+	gluon-ebtables-filter-multicast \
+	gluon-ebtables-filter-ra-dhcp \
+	gluon-web-admin \
+	gluon-web-autoupdater \
+	gluon-web-network \
+	gluon-web-wifi-config \
+	gluon-mesh-batman-adv-15 \
+	gluon-radvd \
+	gluon-setup-mode \
+	gluon-status-page \
+	gluon-tunneldigger-watchdog \
+	gluon-radvd \
+	gluon-setup-mode \
+	gluon-status-page \
+	gluon-migrate-vpn \
+	gluon-mesh-vpn-tunneldigger \
+	iwinfo \
+	iptables \
+	haveged
 
 USB_BASIC := \
 	kmod-usb-core \
