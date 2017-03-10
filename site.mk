@@ -1,29 +1,30 @@
+
 GLUON_SITE_PACKAGES := \
-  gluon-alfred \
+	gluon-mesh-batman-adv-15 \
+	gluon-alfred \
 	gluon-respondd \
+	gluon-autorestart \
 	gluon-autoupdater \
 	gluon-config-mode-autoupdater \
 	gluon-config-mode-contact-info \
 	gluon-config-mode-core \
 	gluon-config-mode-geo-location \
 	gluon-config-mode-hostname \
-	gluon-config-mode-mesh-vpn \
+	gluon-config-mode-tunneldigger \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
+	gluon-ebtables-filter-roguenets \
 	gluon-web-admin \
 	gluon-web-autoupdater \
-	gluon-web-network \
 	gluon-web-wifi-config \
-	gluon-mesh-batman-adv-15 \
-	gluon-radvd \
-	gluon-setup-mode \
-	gluon-status-page \
+	gluon-web-private-wifi \
+	gluon-web-wifi-config \
+	gluon-mesh-vpn-tunneldigger \
 	gluon-tunneldigger-watchdog \
 	gluon-radvd \
 	gluon-setup-mode \
 	gluon-status-page \
 	gluon-migrate-vpn \
-	gluon-mesh-vpn-tunneldigger \
 	iwinfo \
 	iptables \
 	haveged
@@ -70,6 +71,7 @@ ifeq ($(GLUON_TARGET),brcm2708-bcm2709)
 		$(USB_NIC) \
 		$(USB_WIFI)
 endif
+
 
 DEFAULT_GLUON_RELEASE := v1.2.X-exp-$(shell date '+%Y%m%d')
 
