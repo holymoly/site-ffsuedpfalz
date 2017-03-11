@@ -23,7 +23,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-radvd \
 	gluon-setup-mode \
 	gluon-status-page \
-	gluon-migrate-vpn \
 	iwinfo \
 	iptables \
 	haveged
