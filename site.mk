@@ -1,4 +1,3 @@
-
 GLUON_SITE_PACKAGES := \
 	gluon-mesh-batman-adv-15 \
 	gluon-alfred \
@@ -10,21 +9,21 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-core \
 	gluon-config-mode-geo-location \
 	gluon-config-mode-hostname \
+	gluon-config-mode-mesh-vpn \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
-	gluon-ebtables-filter-roguenets \
+	gluon-ebtables-source-filter \
 	gluon-web-admin \
 	gluon-web-autoupdater \
 	gluon-web-wifi-config \
 	gluon-web-private-wifi \
-	gluon-web-wifi-config \
+	gluon-web-network \
 	gluon-mesh-vpn-tunneldigger \
 	gluon-tunneldigger-watchdog \
 	gluon-radvd \
 	gluon-setup-mode \
 	gluon-status-page \
 	iwinfo \
-	iptables \
 	haveged
 
 USB_BASIC := \
@@ -70,8 +69,7 @@ ifeq ($(GLUON_TARGET),brcm2708-bcm2709)
 		$(USB_WIFI)
 endif
 
-
-DEFAULT_GLUON_RELEASE := v1.2.X-exp-$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := v1.6.X-exp-$(shell date '+%Y%m%d')
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
@@ -81,6 +79,6 @@ GLUON_PRIORITY ?= 0
 
 GLUON_LANGS ?= en de
 
-#GLUON_ATH10K_MESH ?= ibss
+GLUON_ATH10K_MESH ?= 11s
 
 GLUON_REGION := eu
