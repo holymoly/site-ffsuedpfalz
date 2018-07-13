@@ -1,28 +1,21 @@
+GLUON_FEATURES := \
+	autoupdater \
+	alfred \
+	ebtables-filter-multicast \
+	ebtables-filter-ra-dhcp \
+	ebtables-limit-arp \
+	ebtables-source-filter \
+	mesh-batman-adv-15 \
+	mesh-vpn-tunneldigger \
+	radvd \
+	respondd \
+	status-page \
+	web-advanced \
+	web-wizard
+
 GLUON_SITE_PACKAGES := \
-	gluon-mesh-batman-adv-15 \
-	gluon-alfred \
-	gluon-respondd \
 	gluon-autorestart \
-	gluon-autoupdater \
-	gluon-config-mode-autoupdater \
-	gluon-config-mode-contact-info \
-	gluon-config-mode-core \
-	gluon-config-mode-geo-location \
-	gluon-config-mode-hostname \
-	gluon-config-mode-mesh-vpn \
-	gluon-ebtables-filter-multicast \
-	gluon-ebtables-filter-ra-dhcp \
-	gluon-ebtables-source-filter \
-	gluon-web-admin \
-	gluon-web-autoupdater \
-	gluon-web-wifi-config \
-	gluon-web-private-wifi \
-	gluon-web-network \
-	gluon-mesh-vpn-tunneldigger \
 	gluon-tunneldigger-watchdog \
-	gluon-radvd \
-	gluon-setup-mode \
-	gluon-status-page \
 	iwinfo \
 	haveged
 
