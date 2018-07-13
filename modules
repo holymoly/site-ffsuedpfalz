@@ -1,11 +1,20 @@
-GLUON_SITE_FEEDS='ffrl_packages ffddorf'
+GLUON_FEEDS='openwrt gluon routing luci'
 
-#FFRL Packages
-PACKAGES_FFRL_PACKAGES_REPO=https://github.com/ffrl/ffrl-packages.git
-PACKAGES_FFRL_PACKAGES_COMMIT=243afde6e4a20f3c45fe2ba8f7d17aa807b99c9f
-PACKAGES_FFRL_PACKAGES_BRANCH=lede-dev
+LEDE_REPO=https://git.lede-project.org/openwrt/openwrt.git
+LEDE_BRANCH=lede-17.01
+LEDE_COMMIT=6577fe2198f5c75acb1dba789941d96a036f4dae
 
-#FFDORF Packages
-PACKAGES_FFDDORF_REPO=https://github.com/ffddorf/ddorf-packages.git
-PACKAGES_FFDDORF_COMMIT=d1631fa99337b31c8b88f3209196b088b8699b8b
-PACKAGES_FFDDORF_BRANCH=lede-dev
+PACKAGES_OPENWRT_REPO=https://github.com/openwrt/packages.git
+PACKAGES_OPENWRT_BRANCH=lede-17.01
+PACKAGES_OPENWRT_COMMIT=82ef2fd773987a72678a32b862f50085c3f57d56
+
+PACKAGES_GLUON_REPO=https://github.com/freifunk-gluon/packages.git
+PACKAGES_GLUON_BRANCH=v2017.1.x
+PACKAGES_GLUON_COMMIT=8b2f752daca5d8af11f1e1df4eddd301f75fb49a
+
+PACKAGES_ROUTING_REPO=https://github.com/openwrt-routing/packages.git
+PACKAGES_ROUTING_COMMIT=e656a6e0e69dd45b7caa24775bc86b6eb5dcfe7f
+
+PACKAGES_LUCI_REPO=https://github.com/openwrt/luci.git
+PACKAGES_LUCI_BRANCH=lede-17.01
+PACKAGES_LUCI_COMMIT=1f014bd2180b364bec4c3f6457f72a0621884f9a
