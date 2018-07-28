@@ -59,7 +59,12 @@ make -j7 V=s GLUON_TARGET=x86-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$
 make -j7 V=s GLUON_TARGET=x86-geode GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
 make -j7 V=s GLUON_TARGET=x86-64 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
 
-cp -r "/temp/$1/output" "${WORKSPACE}/"
+mkdir "/mnt/$1/"
+cp -r "/temp/$1/output" "/mnt/$1/"
+
+rm -r "/temp/$1"
+rm -r "${WORKSPACE}"
+
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das
 # Tools 'ecdsasign' muss auf dem Server verfügbar sein.
