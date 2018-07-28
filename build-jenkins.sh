@@ -19,7 +19,7 @@ set -e
 
 # Globale Einstellungen
 export GLUON_URL=https://github.com/freifunk-gluon/gluon.git
-export GLUON_COMMIT=v2017.1.7
+export GLUON_COMMIT=v2017.1.8
 export GLUON_RELEASE=$GLUON_COMMIT-`date '+%Y%m%d'`
 
 echo "Building gluon $GLUON_COMMIT -> $GLUON_RELEASE"
