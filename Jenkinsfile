@@ -96,8 +96,6 @@ pipeline {
       stage('clean directory') {
           steps {
             sh "rm -r /temp/${env.BRANCH_NAME}"
-            sh "rm -r ${WORKSPACE}"
-            deleteDir()
           }
       }
   }
