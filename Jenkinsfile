@@ -15,6 +15,7 @@ pipeline {
             steps {
               rocketSend channel: 'firmware_builds', message: 'Build started'
               echo "Running ${env.BUILD_ID} on on ${env.JENKINS_URL}"
+              checkout scm
             }
         }
     }
