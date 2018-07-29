@@ -47,7 +47,9 @@ pipeline {
       }
       stage("build brcm2708-bcm2709") {
           steps {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=brcm2708-bcm2709 GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+            }
           }
       }
       stage('build mpc85xx-generic') {
