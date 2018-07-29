@@ -2,7 +2,7 @@ pipeline {
     agent { 
       node {
         label 'master'
-        customWorkspace "/temp/${env.BUILD_ID}"
+        customWorkspace "/temp/${env.BRANCH_NAME}_${env.BUILD_ID}"
       }
     } 
     stages {
