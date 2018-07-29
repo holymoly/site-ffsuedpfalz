@@ -19,56 +19,70 @@ pipeline {
       }
       stage('build ar71xx-generic') {
           steps {
-            dir('/temp/${env.BRANCH_NAME}') {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
             }
           }
       }
       stage('build ar71xx-tiny') {
           steps {
-            dir('/temp/${env.BRANCH_NAME}') {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=ar71xx-tiny GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
             }
           }
       }
-      stage('build ar71xx-nand') {
+      stage("build ar71xx-nand") {
           steps {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=ar71xx-nand GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+            }
           }
       }
-      stage('build brcm2708-bcm2708') {
+      stage("build brcm2708-bcm2708") {
           steps {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=brcm2708-bcm2708 GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+            }
           }
       }
-      stage('build brcm2708-bcm2709') {
+      stage("build brcm2708-bcm2709") {
           steps {
               sh "make -j7 V=s GLUON_TARGET=brcm2708-bcm2709 GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
           }
       }
       stage('build mpc85xx-generic') {
           steps {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=mpc85xx-generic GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+            }
           }
       }
        stage('build ramips-mt7621') {
           steps {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=ramips-mt7621 GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+            }
           }
       }
       stage('build x86-generic') {
           steps {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=x86-generic GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+            }
           }
       }
       stage('build x86-geode') {
           steps {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=x86-geode GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+            }
           }
       }
       stage('build x86-64') {
           steps {
+            dir("/temp/${env.BRANCH_NAME}") {
               sh "make -j7 V=s GLUON_TARGET=x86-64 GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+            }
           }
       }
       stage('move images') {
