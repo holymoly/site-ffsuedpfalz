@@ -90,14 +90,13 @@ pipeline {
       stage('move images') {
           steps {
             sh "mkdir /mnt/images/${env.BRANCH_NAME}"
-            sh "cp -r /temp/${env.BRANCH_NAME}/output /mnt/images/${env.BRANCH_NAME}/"
-
-            sh "rm -r /temp/${env.BRANCH_NAME}"
-            sh "rm -r ${WORKSPACE}"
+            sh "cp -r /temp/${env.BRANCH_NAME}/output/images/ /mnt/images/${env.BRANCH_NAME}/"
           }
       }
       stage('clean directory') {
           steps {
+            sh "rm -r /temp/${env.BRANCH_NAME}"
+            sh "rm -r ${WORKSPACE}"
             deleteDir()
           }
       }
