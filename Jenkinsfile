@@ -74,7 +74,7 @@ pipeline {
         stage('move images') {
             steps {
               sh "mkdir /mnt/images/${env.BRANCH_NAME}"
-              sh "cp -r /temp/${env.BRANCH_NAME}/output /mnt/images/${env.BRANCH_NAME}/""
+              sh "cp -r /temp/${env.BRANCH_NAME}/output /mnt/images/${env.BRANCH_NAME}/"
 
               sh "rm -r /temp/${env.BRANCH_NAME}"
               sh "rm -r ${WORKSPACE}"
