@@ -89,8 +89,8 @@ pipeline {
       }
       stage('move images') {
           steps {
-            sh "mkdir /mnt/images/${env.BRANCH_NAME}"
-            sh "cp -r /temp/${env.BRANCH_NAME}/output/images/ /mnt/images/${env.BRANCH_NAME}/"
+            sh "mkdir -p /mnt/images/${env.BRANCH_NAME}"
+            sh "yes | cp -rf /temp/${env.BRANCH_NAME}/output/images/ /mnt/images/${env.BRANCH_NAME}/"
           }
       }
       stage('clean directory') {
