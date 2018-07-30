@@ -91,6 +91,7 @@ pipeline {
           steps {
             sh "mkdir /mnt/images/${env.BRANCH_NAME}"
             sh "cp -r /temp/${env.BRANCH_NAME}/output/images/ /mnt/images/${env.BRANCH_NAME}/"
+            rocketSend channel: 'firmware_builds', message: 'Build finished'
           }
       }
       stage('clean directory') {
