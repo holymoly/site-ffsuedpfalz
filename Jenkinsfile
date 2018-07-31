@@ -6,7 +6,7 @@ pipeline {
     }
   }
   parameters {
-    string(name: 'GLUON_VERSION', defaultValue: 'v2017.1.8', description: 'Gluon version')
+    string(name: 'GLUON_VERSION', defaultValue: 'v2018.1', description: 'Gluon version')
   }
   stages {
       stage('prepare build') {
