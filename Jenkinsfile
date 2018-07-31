@@ -20,7 +20,7 @@ pipeline {
       stage('build ar71xx-generic') {
           steps {
             dir("/temp/${env.BRANCH_NAME}") {
-              sh "make -j7 V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
+              sh "make -j1 V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
             }
           }
       }
