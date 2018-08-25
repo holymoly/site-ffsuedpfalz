@@ -1,12 +1,12 @@
 pipeline {
-  agent { 
+  agent {
     node {
       label 'master'
       customWorkspace "/temp/.jenkins_${env.BRANCH_NAME}_site"
     }
   }
   parameters {
-    string(name: 'GLUON_VERSION', defaultValue: 'v2017.1.8', description: 'Gluon version')
+    string(name: 'GLUON_VERSION', defaultValue: 'v2017.1.4', description: 'Gluon version')
   }
   stages {
       stage('prepare build') {
@@ -100,8 +100,8 @@ pipeline {
           }
       }
   }
-  post { 
-      failure { 
+  post {
+      failure {
           rocketSend channel: 'firmware_builds', message: 'Build error'
       }
   }
