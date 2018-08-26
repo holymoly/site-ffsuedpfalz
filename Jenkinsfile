@@ -59,13 +59,6 @@ pipeline {
             }
           }
       }
-       stage('build ramips-mt7621') {
-          steps {
-            dir("/temp/${env.BRANCH_NAME}") {
-              sh "make -j7 V=s GLUON_TARGET=ramips-mt7621 GLUON_BRANCH=experimental GLUON_RELEASE=${params.GLUON_VERSION}"
-            }
-          }
-      }
       stage('build x86-generic') {
           steps {
             dir("/temp/${env.BRANCH_NAME}") {
