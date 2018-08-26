@@ -24,6 +24,7 @@ GLUON_SITE_PACKAGES := \
   gluon-radv-filterd \  
   gluon-setup-mode \
   gluon-status-page \
+  respondd-module-airtime \
   iwinfo \
   haveged
 
