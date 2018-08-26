@@ -21,6 +21,7 @@ GLUON_SITE_PACKAGES := \
   gluon-mesh-vpn-tunneldigger \
   gluon-tunneldigger-watchdog \
   gluon-radvd \
+  gluon-radv-filterd \  
   gluon-setup-mode \
   gluon-status-page \
   iwinfo \
