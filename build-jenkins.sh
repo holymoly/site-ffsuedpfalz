@@ -49,16 +49,16 @@ cd "/temp/$1"
 
 make update "GLUON_RELEASE=$GLUON_RELEASE"
 #make clean V=s GLUON_TARGET=ar71xx-generic
-#make -j7 V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=ar71xx-tiny GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=ar71xx-nand GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=brcm2708-bcm2708 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=brcm2708-bcm2709 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=mpc85xx-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=x86-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=ramips-mt7621 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=x86-geode GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
-#make -j7 V=s GLUON_TARGET=x86-64 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=ar71xx-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=ar71xx-tiny GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=ar71xx-nand GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=brcm2708-bcm2708 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=brcm2708-bcm2709 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=mpc85xx-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=x86-generic GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=ramips-mt7621 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=x86-geode GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
+#make -j13 V=s GLUON_TARGET=x86-64 GLUON_BRANCH=experimental "GLUON_RELEASE=$GLUON_RELEASE"
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das
