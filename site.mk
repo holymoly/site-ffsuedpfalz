@@ -16,7 +16,6 @@ GLUON_FEATURES := \
 GLUON_SITE_PACKAGES := \
   gluon-autorestart \
   gluon-tunneldigger-watchdog \
-  gluon-domain-migrator \
   iwinfo \
   haveged
 
