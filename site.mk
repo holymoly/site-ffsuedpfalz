@@ -17,6 +17,7 @@ GLUON_SITE_PACKAGES := \
   gluon-autorestart \
   gluon-tunneldigger-watchdog \
   iwinfo \
+  tcpdump \
   haveged
 
 USB_BASIC := \
