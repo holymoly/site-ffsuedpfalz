@@ -35,7 +35,7 @@ git checkout -f $GLUON_COMMIT
 # Site config kopieren
 test -d "/temp/$1/site" && rm -r "/temp/$1/site"
 mkdir "/temp/$1/site"
-cp -r "${WORKSPACE}/*" "/temp/$1/site/"
+cp -r ${WORKSPACE}/* "/temp/$1/site/"
 #cp "${WORKSPACE}/modules" "/temp/$1/site/"
 #cp "${WORKSPACE}/site.mk" "/temp/$1/site/"
 #cp "${WORKSPACE}/site.conf" "/temp/$1/site/"
